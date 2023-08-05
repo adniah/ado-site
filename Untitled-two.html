@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Andale Mono', monospace;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #ff8a00, #e52e71, #6610f2);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+        
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .profile-picture {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 20px;
+        }
+        
+        .profile-picture img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .button:hover {
+            background-color: #555;
+        }
+        
+        .section {
+            margin-top: 20px;
+            text-align: left;
+            cursor: pointer;
+            border-top: 1px solid #ccc;
+        }
+        
+        .section-title {
+            padding: 10px;
+            font-weight: bold;
+        }
+        
+        .section-content {
+            display: none;
+            padding: 10px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Andale+Mono&display=swap" rel="stylesheet">
+    <script>
+        function toggleSection(sectionId) {
+            var sectionContent = document.getElementById(sectionId + "-content");
+            if (sectionContent.style.display === "block") {
+                sectionContent.style.display = "none";
+            } else {
+                sectionContent.style.display = "block";
+            }
+        }
+    </script>
+    <title>adoniah o</title>
+</head>
+
+<body>
+    <header>
+        <div class="profile-picture">
+            <img src="mgmi2.jpg" alt="Profile Picture">
+        </div>
+        <h1>adoniah olojugba</h1>
+    </header>
+
+    <div class="container">
+        <div class="section" id="about" onclick="toggleSection('about')">
+            <h2 class="section-title">about</h2>
+            <div class="section-content" id="about-content">
+                <p>I am a Computer Science student who started at the University of Edinburgh in 2021. Whilst I am figuring out what to specialise in, I have experience in data (analytics, storage and manipulation), software engineering, consulting and project
+                    management.
+                </p>
+            </div>
+        </div>
+
+        <div class="section" id="projects" onclick="toggleSection('projects')">
+            <h2 class="section-title">projects/articles</h2>
+            <div class="section-content" id="projects-content">
+                <p>coming soon</p>
+                <a href="https://github.com/adn1ah">However, you can follow me on Github for updates.</a>
+                <a href="https://medium.com/@adoniah">You can follow me on medium too for articles.</a>
+            </div>
+        </div>
+
+        <style>
+            /* Add this style to your existing styles */
+            
+            .hobbies-pictures {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-wrap: wrap;
+            }
+            
+            .hobby {
+                flex: 0 0 calc(33.33% - 20px);
+                /* Adjust width and spacing as needed */
+                margin: 10px;
+                text-align: center;
+            }
+            
+            .hobby-image {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        </style>
+
+        <div class="section" id="hobbies" onclick="toggleSection('hobbies')">
+            <h2 class="section-title">fav things right now</h2>
+            <div class="section-content" id="hobbies-content">
+                <p>here are some of my favourite things right now</p>
+                <div class="hobbies-pictures">
+                    <div class="hobby">
+                        <a href="https://open.spotify.com/album/1bwbZJ6khPJyVpOaqgKsoZ"><img src="Metro-Boomin-Spider-Man.webp" alt="Hobby 1" class="hobby-image"></a>
+                        <p>music</p>
+                    </div>
+                    <div class="hobby">
+                        <a href="https://www.youtube.com/watch?v=uYPbbksJxIg"><img src="oppenheimer.jpg" alt="Hobby 2" class="hobby-image"></a>
+                        <p>film</p>
+                    </div>
+                    <div class="hobby">
+                        <a href="https://www.youtube.com/watch?v=zw47_q9wbBE"><img src="M4PRVKY4BRPKFCGT3DBRJ6UNRQ.avif" alt="Hobby 3" class="hobby-image"></a>
+                        <p>video game</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="contact" onclick="toggleSection('contact')">
+            <h2 class="section-title">contact me</h2>
+            <div class="section-content" id="contact-content">
+                <p>you can reach me through</p>
+                <a href="mailto:tolojugba@hotmail.co.uk">e-mail</a>
+                <a href="https://www.linkedin.com/in/adoniah1/">linkedIn</a>
+                <a href="https://github.com/adn1ah">github</a>
+                <a href="https://medium.com/@adoniah">medium</a>
+                <p></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
